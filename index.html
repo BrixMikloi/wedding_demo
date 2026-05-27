@@ -1,436 +1,493 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A modern Filipiniana wedding invitation for Brix and Ardyl.">
-  <title>John & Arlyn | Wedding Invitation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Old+Standard+TT:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="loader" aria-label="Loading wedding invitation">
-    <div>
-      <span class="monogram">J & A</span>
-      <p>Opening the invitation</p>
-    </div>
-  </div>
-
-  <nav class="nav" aria-label="Primary navigation">
-    <a class="nav__mark" href="#home">J | A</a>
-    <button class="nav__toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav__links">
-      <a href="#story">Story</a>
-      <a href="#details">Details</a>
-       <a href="#gallery">Gallery</a>
-      <a href="#rsvp">RSVP</a>
-    </div>
-  </nav>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero__media" data-parallax></div>
-      <div class="hero__veil"></div>
-      <div class="float float--one"></div>
-      <div class="float float--two"></div>
-      <button class="music-toggle" type="button" aria-label="Toggle background music" aria-pressed="false">
-        <span class="music-toggle__icon">Audio</span>
-        <span>Music</span>
-      </button>
-      <audio id="weddingMusic" loop autoplay preload="none">
-        <source src="src/audio/jk_throughtheyears.mp3" type="audio/mpeg">
-      </audio>
-
-      <div class="hero__content reveal">
-        <p class="eyebrow">A modern Filipiniana wedding</p>
-        <h1>John <span>&</span> Arlyn</h1>
-        <p class="hero__quote">With all that we are, and all that home has taught us, we begin again together.</p>
-        <div class="hero__meta">
-          <span>June 18, 2027</span>
-          <span>St. Joseph the Worker Cathedral - Ipil</span>
-        </div>
-        <div class="countdown" aria-label="Wedding countdown">
-          <div><strong id="days">000</strong><span>Days</span></div>
-          <div><strong id="hours">00</strong><span>Hours</span></div>
-          <div><strong id="minutes">00</strong><span>Minutes</span></div>
-          <div><strong id="seconds">00</strong><span>Seconds</span></div>
-        </div>
-        <a class="button button--light" href="#rsvp">Respond With Love</a>
-      </div>
-    </section>
-
-    <section class="intro section reveal">
-      <div class="section__kicker">Mabuhay, beloved guests</div>
-      <h3>An invitation wrapped in warmth, promise, and quiet Filipino grace.</h3>
-      <p>We imagined this day with the softness of capiz light, the shape of tropical flowers, the restraint of modern tailoring, and the feeling of family gathered close.</p>
-    </section>
-
-    <section class="story section" id="story">
-      <div class="story__item reveal">
-        <div class="story__image image-frame">
-          <img src="src/img/story.jpg" alt="A couple walking hand in hand along a sun-dappled path, golden afternoon light surrounding them, conveying warmth and intimate connection">
-        </div>
-        <div class="story__copy">
-          <span class="section__kicker">Our Story</span>
-          <h3>Some paths are meant to cross at the perfect time.</h3>
-          <p>John and Arlyn’s story began with a simple conversation that unexpectedly turned into something special.
-          <br><br>
-          What started as casual chats slowly became daily conversations, shared dreams, and endless laughter. Through every season of life, they became each other’s comfort, best friend, and safe place.
-          <br><br>
-          As time passed, love naturally grew between them — steady, genuine, and full of understanding. Now, their story continues hand in hand, building a future filled with love, memories, and forever.</p>
-        </div>
-      </div>
-      <div class="story__item story__item--reverse reveal">
-        <div class="story__image image-frame">
-          <img src="src/img/proposal.jpg" alt="Delicate white and blush flowers arranged with greenery, soft ribbons and wedding rings displayed among the florals, creating an elegant and romantic aesthetic">
-        </div>
-        <div class="story__copy">
-          <span class="section__kicker">The Journey</span>
-          <h3>From simple moments to a lifetime together.</h3>
-          <p>During a quiet getaway together, John and Arlyn found themselves surrounded by a breathtaking view and the kind of peace that makes time slow down.
-          <br><br>
-          As they watched the scenery and shared stories about their journey together, John held Arlyn’s hand and asked the question he had been carrying in his heart for so long, to spend forever with him.
-          <br><br>
-          With happy tears and a heartfelt yes, that beautiful moment became the beginning of their forever.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="details section" id="details">
-      <div class="section-heading reveal">
-        <span class="section__kicker">Wedding Day</span>
-        <h3>Ceremony, celebration, and the rhythm of the day.</h3>
-      </div>
-      <div class="details__grid reveal">
-        <article>
-          <p class="label">Ceremony</p>
-          <h3>St. Joseph the Worker Cathedral</h3>
-          <p>Climaco Dr., Poblacion, Ipil, Zamboanga Sibugay<br>June 18, 2027 | 2:30 PM</p>
-        </article>
-        <article>
-          <p class="label">Reception</p>
-          <h3>RedDoorz @ Jackie’s Hotel & Restaurant</h3>
-          <p>Poblacion, Ipil, Zamboanga Sibugay<br>Snacks at 4:00 PM | Dinner at 6:30 PM</p>
-        </article>
-      </div>
-      <div class="timeline reveal" aria-label="Wedding day timeline">
-        <div><time>2:00 PM</time><span>Guest Arrival</span></div>
-        <div><time>2:30 PM</time><span>Nuptial Mass</span></div>
-        <div><time>4:00 PM</time><span>Reception Snacks</span></div>
-        <div><time>6:30 PM</time><span>Dinner</span></div>
-        <div><time>8:00 PM</time><span>Toasts & First Dance</span></div>
-      </div>
-      <div class="map-wrap reveal">
-        <iframe title="Map to Jackie’s Hotel & Restaurant" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Jackie’s+Hotel+%26+Restaurant%2C+Poblacion%2C+Ipil%2C+Zamboanga+Sibugay&output=embed"></iframe>
-      </div>
-      <p class="note reveal">Parking is available at both venues. Please arrive at the church by 2:00 PM so the ceremony may begin in quiet reverence.</p>
-    </section>
-
-    <section class="dress section" id="dress">
-      
-      <div class="dress__copy reveal">
-        <span class="section__kicker">Dress Code</span>
-        <h3>Formal, airy, and modern Filipiniana-inspired.</h3>
-        <p>Ladies are encouraged to wear refined Filipiniana silhouettes, soft sleeves, pina-inspired textures, silk, organza, or tailored evening dresses. Gentlemen may wear barong Tagalog, linen suits, or formal earth-toned tailoring.</p>
-      </div>
-      <div class="palette reveal" aria-label="Wedding color palette">
-        <span style="--swatch:#f8f3ea">Ivory</span>
-        <span style="--swatch:#e8d6b8">Champagne</span>
-        <span style="--swatch:#c9bea5">Warm Beige</span>
-        <span style="--swatch:#9eaa8d">Soft Sage</span>
-        <span style="--swatch:#b99b5f">Muted Gold</span>
-      </div>
-      
-      <!-- <div class="fashion-strip reveal">
-        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=80" alt="Ivory formal fabric detail">
-        <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=800&q=80" alt="Elegant wedding attire inspiration">
-        <img src="https://images.unsplash.com/photo-1490725263030-1f0521cec8ec?auto=format&fit=crop&w=800&q=80" alt="Soft tropical floral inspiration">
-      </div> -->
-    </section>
-
-    <section class="gifts section reveal">
-      <span class="section__kicker">Gifts</span>
-      <h3>Your presence is already a blessing.</h3>
-      <p>For those who wish to honor us with a gift, a monetary contribution toward our first home would be received with gratitude.</p>
-      <div class="gift-lines">
-        <span>GCash: 0917 000 0000</span>
-        <span>Bank: BPI 0000 0000 0000</span>
-      </div>
-    </section>
-
-    <section class="entourage section" id="entourage">
-      <div class="section-heading reveal">
-        <span class="section__kicker">Entourage</span>
-        <h3>With the people who raised us, shaped us, and stand beside us.</h3>
-      </div>
-
-      <div class="names reveal">
-          <div class="names__group names__group--partnered">
-          <div class="names__item">
-            <h3>Grooms Parents</h3>
-            <p>Juan Dela Cruz<br>Maria Dela Cruz</p>
-          </div>
-          <div class="names__item">
-            <h3>Brides Parents</h3>
-           
-            <p>Daniel Santos<br>Maria Santos</p>
-          </div>
-        </div>
-        <div class="names__group names__group--partnered">
-          <div class="names__item names__item--wide">
-            <h3>Principal Sponsors</h3>
-            <p class="names__note">Guiding us with wisdom, love, and lifelong inspiration.</p>
-            <ul class="names__pairs">
-              <li>Antonio Dela Cruz & Maria Dela Cruz</li>
-              <li>Roberto Santos & Elena Santos</li>
-              <li>Michael Villanueva & Teresa Villanueva</li>
-              <li>Ramon Navarro & Cristina Navarro</li>
-              <li>Eduardo Fernandez & Liza Fernandez</li>
-              <li>Victor Reyes & Angela Reyes</li>
-              <li>Benjamin Mendoza & Sofia Mendoza</li>
-              <li>Daniel Garcia & Clarissa Garcia</li>
-              <li>Samuel Lim & Patricia Lim</li>
-              <li>Joaquin Torres & Isabelle Torres</li>
-            </ul>
-          </div>
-          <div class="names__item names__item--wide">
-            
-            <h3>Secondary Sponsors</h3>
-            <p class="names__note">Witnessing our union through cherished traditions and blessings.</p>
-          </div>
-          <div class="names__item">
-            <h3>To Light Our Path</h3>
-            <ul>
-              <li>Adrian Castillo & Nicole Castillo</li>
-              <li>Marcus Herrera & Alyssa Herrera</li>
-            </ul>
-          </div>
-          <div class="names__item">
-            <h3>To Clothe Us as One</h3>
-            <ul>
-              <li>Gabriel Bautista & Camille Bautista</li>
-              <li>Ethan Valdez & Bianca Valdez</li>
-            </ul>
-          </div>
-          <div class="names__item">
-            <h3>To Bind Us Together</h3>
-            <ul>
-              <li>Christian Flores & Sophia Flores</li>
-              <li>Nathan Reyes & Olivia Reyes</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="names__group names__group--partnered">
-          <div class="names__item">
-            <h3>Maid of Honor</h3>
-            
-            <p>Sofia Ramirez</p>
-          </div>
-          <div class="names__item">
-            <h3>Best Man</h3>
-           
-            <p>Daniel Cruz</p>
-          </div>
-        </div>
-
-        <div class="names__group names__group--partnered">
-          <div class="names__item">
-            <h3>Bridesmaids</h3>
-            
-            <ul>
-              <li>Alyssa Gomez</li>
-              <li>Camille Rivera</li>
-              <li>Nicole Bautista</li>
-              <li>Bianca Flores</li>
-            </ul>
-          </div>
-          <div class="names__item">
-            <h3>Groomsmen</h3>
-            
-            <ul>
-              <li>Marcus Herrera</li>
-              <li>Ethan Valdez</li>
-              <li>Adrian Castillo</li>
-              <li>Gabriel Santos</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="names__group names__group--3up">
-          <div class="names__item">
-            <h3>Ring Bearer</h3>
-            
-            <p>Lucas Fernandez</p>
-          </div>
-          <div class="names__item">
-            <h3>Bible Bearer</h3>
-            
-            <p>Nathan Reyes</p>
-          </div>
-          <div class="names__item">
-            <h3>Coin Bearer</h3>
-            
-            <p>Liam Navarro</p>
-          </div>
-          <div class="names__item">
-            <br>
-            <h3>Flower Girls</h3>
-            
-            <ul>
-              <li>Chloe Martinez</li>
-              <li>Isabella Cruz</li>
-              <li>Mia Lopez</li>
-              <li>Sofia Anne Lim</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery section" id="gallery">
-      <div class="section-heading reveal">
-        <span class="section__kicker">Gallery</span>
-        <h3>A few frames from the season before forever.</h3>
-      </div>
-      <div class="gallery__grid reveal">
-        <button class="gallery__item tall" data-gallery="0"><img  src="src/img/1.jpg" alt="A bride in her wedding dress photographed in soft, diffused light, her gaze gentle and contemplative, creating an intimate and romantic mood"></button>
-        <button class="gallery__item" data-gallery="1"><img  src="src/img/3.jpg" alt="Two hands intertwined, the bride wearing her wedding ring, their fingers gently clasped together expressing commitment and affection"></button>
-        <button class="gallery__item wide" data-gallery="2"><img src="src/img/7.jpg" alt="A luxurious bridal bouquet featuring blush roses, white flowers, and greenery wrapped in ivory silk ribbon held in the bride hands against her white gown"></button>
-        <button class="gallery__item" data-gallery="3"><img src="src/img/4.jpg" alt="A couple standing together on a beach with calm blue water in the background, their poses relaxed and close, creating a peaceful and romantic seaside moment"></button>
-        <button class="gallery__item" data-gallery="4"><img src="src/img/5.jpg" alt="Silhouettes of a bride and groom standing close together against a golden sunset sky, their forms outlined in warm light conveying romance and celebration"></button>
-        <button class="gallery__item" data-gallery="5"><img src="src/img/6.jpg" alt="Silhouettes of a bride and groom standing close together against a golden sunset sky, their forms outlined in warm light conveying romance and celebration"></button>
-      </div>
-    </section>
-
-    <section class="rsvp section" id="rsvp">
-      <div class="rsvp__intro reveal">
-        <span class="section__kicker">RSVP</span>
-        <h3>Kindly respond by<br>May 18, 2027.</h3>
-        <p>Seats have been lovingly reserved for invited guests. We cannot wait to celebrate with you.</p>
-      </div>
-      <form class="rsvp__form reveal" id="rsvpForm" novalidate>
-          <label >Full name<input name="name" autocomplete="name" required></label>
-        <div class="group__row">
-          <label>
-            Email
-            <input id="guest-email" name="email" type="email" autocomplete="email" required />
-  </label>
-  <label>
-    Contact Number
-    <input
-      id="guest-contact"
-      name="contact"
-      type="tel"
-      autocomplete="tel"
-      required
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A modern Filipiniana wedding invitation for Brix and Ardyl."
     />
-  </label>
-</div>
-<div class="group__row">
-        <label>Will you attend?
-          <select name="attendance" required>
-            <option value="">Select an answer</option>
-            <option>Joyfully attending</option>
-            <option>Regretfully unable to attend</option>
-          </select>
-        </label>
-        <label>Number of guests
-          <select name="guests" required>
-            <option value="">Select</option>
-            <option>1</option>
-            <option>2</option>
-          </select>
-        </label>
-        </div>
-        <label class="full">Message for the couple<textarea name="message" rows="4"></textarea></label>
-        <p class="form-status" role="status" aria-live="polite"></p>
-        <button class="button" type="submit">Send RSVP</button>
-      </form>
-      <!-- <div class="calendar reveal">
-        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Brix%20%26%20Ardyl%20Wedding&dates=20270618T063000Z/20270618T140000Z&details=Wedding%20ceremony%20and%20reception&location=Silang%20Cavite%20and%20Laurel%20Batangas" target="_blank" rel="noreferrer">Google Calendar</a>
-        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Brix%20%26%20Ardyl%20Wedding%0ADTSTART:20270618T063000Z%0ADTEND:20270618T140000Z%0ALOCATION:Silang%20Cavite%20and%20Laurel%20Batangas%0AEND:VEVENT%0AEND:VCALENDAR" download="brix-ardyl-wedding.ics">Apple Calendar</a>
-        <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Brix%20%26%20Ardyl%20Wedding&startdt=2027-06-18T14:30:00&enddt=2027-06-18T22:00:00&location=Silang%20Cavite%20and%20Laurel%20Batangas" target="_blank" rel="noreferrer">Outlook</a>
-      </div> -->
-    </section>
-
-    <section class="faq section" id="faq">
-      <div class="section-heading reveal">
-        <span class="section__kicker">Gentle Reminders</span>
-        <h3>Everything to know before the day.</h3>
+    <title>John & Arlyn | Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Old+Standard+TT:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" aria-label="Loading wedding invitation">
+      <div>
+        <span class="monogram">J & A</span>
+        <p>Opening the invitation</p>
       </div>
-      <div class="accordion reveal">
-        <button type="button">Can we bring additional guests?<span>+</span></button>
-        <div>We have reserved seats for the names listed on your invitation. Thank you for understanding.</div>
-        <button type="button">Is parking available?<span>+</span></button>
-        <div>Yes. Parking attendants will guide guests at both the church and reception venue.</div>
-        <button type="button">What time should we arrive?<span>+</span></button>
-        <div>Please arrive at the church by 2:00 PM so everyone may be seated before the procession.</div>
-        <button type="button">Are children invited?<span>+</span></button>
-        <div>Only children included in the entourage or named on the invitation are reserved seats.</div>
-      </div>
-    </section>
-
-    
-
-    <!-- <section class="messages section" id="messages">
-      <div class="section-heading reveal">
-        <span class="section__kicker">Wishes</span>
-        <h3>Leave a little love for the couple.</h3>
-      </div>
-      <form class="wish-form reveal" id="wishForm">
-        <input aria-label="Your name" name="name" placeholder="Your name" required>
-        <textarea aria-label="Your message" name="wish" placeholder="Your message" required></textarea>
-        <button class="button" type="submit">Leave a Wish</button>
-      </form>
-      <div class="wish-wall reveal" id="wishWall"></div>
-    </section>
-
-    <section class="photo-share section reveal">
-      <span class="section__kicker">Photo Sharing</span>
-      <h2>Share your favorite moments from the day.</h2>
-      <p>Scan the code at the venue or use the upload link after the celebration. This area is ready to connect to Google Drive, Dropbox, or a private guest gallery.</p>
-      <div class="upload-row">
-        <div class="qr" aria-label="QR code placeholder"></div>
-        <label class="upload">
-          <input type="file" accept="image/*" multiple>
-          <span>Choose Photos</span>
-        </label>
-      </div>
-    </section> -->
-  </main>
-
-  <footer class="footer">
-    <div class="footer__image"></div>
-    <div class="footer__content reveal">
-      <span class="monogram">J | A</span>
-      <h3>Thank you for being part of our beginning.</h3>
-      <p>June 18, 2027 / Ipil, Zamboanga Sibugay</p>
-      <p>Made with ❤️ by BrixMikloi</p>
     </div>
-  </footer>
 
- <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery image viewer">
-  <button class="lightbox__close btn__ctrl" type="button" aria-label="Close gallery">
-    <img src="src/icons/close-btn.svg" alt="Close">
-  </button>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav__mark" href="#home">J | A</a>
+      <button class="nav__toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links">
+        <a href="#story">Story</a>
+        <a href="#details">Details</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#rsvp">RSVP</a>
+      </div>
+    </nav>
+    <button
+      class="music-toggle"
+      type="button"
+      aria-label="Toggle background music"
+      aria-pressed="false"
+    >
+      <img
+        class="music-toggle__icon music-toggle__icon--off"
+        src="src/icons/audio-off.svg"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        class="music-toggle__icon music-toggle__icon--on"
+        src="src/icons/audio-on.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </button>
+    <audio id="weddingMusic" loop autoplay preload="none">
+      <source src="src/audio/jk_throughtheyears.mp3" type="audio/mpeg" />
+    </audio>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero__media" data-parallax></div>
+        <div class="hero__veil"></div>
+        <div class="float float--one"></div>
+        <div class="float float--two"></div>
 
-  <button class="lightbox__prev btn__ctrl" type="button" aria-label="Previous image">
-    <img src="src/icons/back-btn.svg" alt="Previous">
-  </button>
+        <div class="hero__content reveal">
+          <p class="eyebrow">A modern Filipiniana wedding</p>
+          <h1>John <span>&</span> Arlyn</h1>
+          <p class="hero__quote">
+            With all that we are, and all that home has taught us, we begin again together.
+          </p>
+          <div class="hero__meta">
+            <span>June 18, 2027</span>
+            <span>St. Joseph the Worker Cathedral - Ipil</span>
+          </div>
+          <div class="countdown" aria-label="Wedding countdown">
+            <div><strong id="days">000</strong><span>Days</span></div>
+            <div><strong id="hours">00</strong><span>Hours</span></div>
+            <div><strong id="minutes">00</strong><span>Minutes</span></div>
+            <div><strong id="seconds">00</strong><span>Seconds</span></div>
+          </div>
+          <a class="button button--light" href="#rsvp">Respond With Love</a>
+        </div>
+      </section>
 
-  <img class="lightbox__image" alt="">
+      <section class="intro section reveal">
+        <div class="section__kicker">Mabuhay, beloved guests</div>
+        <h3>An invitation wrapped in warmth, promise, and quiet Filipino grace.</h3>
+        <p>
+          We imagined this day with the softness of capiz light, the shape of tropical flowers, the
+          restraint of modern tailoring, and the feeling of family gathered close.
+        </p>
+      </section>
 
-  <button class="lightbox__next btn__ctrl" type="button" aria-label="Next image">
-    <img src="src/icons/next-btn.svg" alt="Next">
-  </button>
-</div>
+      <section class="story section" id="story">
+        <div class="story__item reveal">
+          <div class="story__image image-frame">
+            <img
+              src="src/img/story.jpg"
+              alt="A couple walking hand in hand along a sun-dappled path, golden afternoon light surrounding them, conveying warmth and intimate connection"
+            />
+          </div>
+          <div class="story__copy">
+            <span class="section__kicker">Our Story</span>
+            <h3>Some paths are meant to cross at the perfect time.</h3>
+            <p>
+              John and Arlyn’s story began with a simple conversation that unexpectedly turned into
+              something special. <br /><br />
+              What started as casual chats slowly became daily conversations, shared dreams, and
+              endless laughter. Through every season of life, they became each other’s comfort, best
+              friend, and safe place.
+              <br /><br />
+              As time passed, love naturally grew between them — steady, genuine, and full of
+              understanding. Now, their story continues hand in hand, building a future filled with
+              love, memories, and forever.
+            </p>
+          </div>
+        </div>
+        <div class="story__item story__item--reverse reveal">
+          <div class="story__image image-frame">
+            <img
+              src="src/img/proposal.jpg"
+              alt="Delicate white and blush flowers arranged with greenery, soft ribbons and wedding rings displayed among the florals, creating an elegant and romantic aesthetic"
+            />
+          </div>
+          <div class="story__copy">
+            <span class="section__kicker">The Journey</span>
+            <h3>From simple moments to a lifetime together.</h3>
+            <p>
+              During a quiet getaway together, John and Arlyn found themselves surrounded by a
+              breathtaking view and the kind of peace that makes time slow down. <br /><br />
+              As they watched the scenery and shared stories about their journey together, John held
+              Arlyn’s hand and asked the question he had been carrying in his heart for so long, to
+              spend forever with him.
+              <br /><br />
+              With happy tears and a heartfelt yes, that beautiful moment became the beginning of
+              their forever.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <script src="script.js"></script>
-  <script src="googleScript.js"></script>
-</body>
+      <section class="details section" id="details">
+        <div class="section-heading reveal">
+          <span class="section__kicker">Wedding Day</span>
+          <h3>Ceremony, celebration, and the rhythm of the day.</h3>
+        </div>
+        <div class="details__grid reveal">
+          <article>
+            <p class="label">Ceremony</p>
+            <h3>St. Joseph the Worker Cathedral</h3>
+            <p>Climaco Dr., Poblacion, Ipil, Zamboanga Sibugay<br />June 18, 2027 | 2:30 PM</p>
+          </article>
+          <article>
+            <p class="label">Reception</p>
+            <h3>RedDoorz @ Jackie’s Hotel & Restaurant</h3>
+            <p>Poblacion, Ipil, Zamboanga Sibugay<br />Snacks at 4:00 PM | Dinner at 6:30 PM</p>
+          </article>
+        </div>
+        <div class="timeline reveal" aria-label="Wedding day timeline">
+          <div><time>2:00 PM</time><span>Guest Arrival</span></div>
+          <div><time>2:30 PM</time><span>Nuptial Mass</span></div>
+          <div><time>4:00 PM</time><span>Reception Snacks</span></div>
+          <div><time>6:30 PM</time><span>Dinner</span></div>
+          <div><time>8:00 PM</time><span>Toasts & First Dance</span></div>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe
+            title="Map to Jackie’s Hotel & Restaurant"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Jackie’s+Hotel+%26+Restaurant%2C+Poblacion%2C+Ipil%2C+Zamboanga+Sibugay&output=embed"
+          ></iframe>
+        </div>
+        <p class="note reveal">
+          Parking is available at both venues. Please arrive at the church by 2:00 PM so the
+          ceremony may begin in quiet reverence.
+        </p>
+      </section>
+
+      <section class="dress section" id="dress">
+        <div class="dress__copy reveal">
+          <span class="section__kicker">Dress Code</span>
+          <h3>Formal, airy, and modern Filipiniana-inspired.</h3>
+          <p>
+            Ladies are encouraged to wear refined Filipiniana silhouettes, soft sleeves,
+            pina-inspired textures, silk, organza, or tailored evening dresses. Gentlemen may wear
+            barong Tagalog, linen suits, or formal earth-toned tailoring.
+          </p>
+        </div>
+        <div class="palette reveal" aria-label="Wedding color palette">
+          <span style="--swatch: #f8f3ea">Ivory</span>
+          <span style="--swatch: #e8d6b8">Champagne</span>
+          <span style="--swatch: #c9bea5">Warm Beige</span>
+          <span style="--swatch: #9eaa8d">Soft Sage</span>
+          <span style="--swatch: #b99b5f">Muted Gold</span>
+        </div>
+      </section>
+
+      <section class="gifts section reveal">
+        <span class="section__kicker">Gifts</span>
+        <h3>Your presence is already a blessing.</h3>
+        <p>
+          For those who wish to honor us with a gift, a monetary contribution toward our first home
+          would be received with gratitude.
+        </p>
+        <div class="gift-lines">
+          <span>GCash: 0917 000 0000</span>
+          <span>Bank: BPI 0000 0000 0000</span>
+        </div>
+      </section>
+
+      <section class="entourage section" id="entourage">
+        <div class="section-heading reveal">
+          <span class="section__kicker">Entourage</span>
+          <h3>With the people who raised us, shaped us, and stand beside us.</h3>
+        </div>
+
+        <div class="names reveal">
+          <div class="names__group names__group--partnered">
+            <div class="names__item">
+              <h3>Grooms Parents</h3>
+              <p>Juan Dela Cruz<br />Maria Dela Cruz</p>
+            </div>
+            <div class="names__item">
+              <h3>Brides Parents</h3>
+
+              <p>Daniel Santos<br />Maria Santos</p>
+            </div>
+          </div>
+          <div class="names__group names__group--partnered">
+            <div class="names__item names__item--wide">
+              <h3>Principal Sponsors</h3>
+              <p class="names__note">Guiding us with wisdom, love, and lifelong inspiration.</p>
+              <ul class="names__pairs">
+                <li>Antonio Dela Cruz & Maria Dela Cruz</li>
+                <li>Roberto Santos & Elena Santos</li>
+                <li>Michael Villanueva & Teresa Villanueva</li>
+                <li>Ramon Navarro & Cristina Navarro</li>
+                <li>Eduardo Fernandez & Liza Fernandez</li>
+                <li>Victor Reyes & Angela Reyes</li>
+                <li>Benjamin Mendoza & Sofia Mendoza</li>
+                <li>Daniel Garcia & Clarissa Garcia</li>
+                <li>Samuel Lim & Patricia Lim</li>
+                <li>Joaquin Torres & Isabelle Torres</li>
+              </ul>
+            </div>
+            <div class="names__item names__item--wide">
+              <h3>Secondary Sponsors</h3>
+              <p class="names__note">
+                Witnessing our union through cherished traditions and blessings.
+              </p>
+            </div>
+            <div class="names__item">
+              <h3>To Light Our Path</h3>
+              <ul>
+                <li>Adrian Castillo & Nicole Castillo</li>
+                <li>Marcus Herrera & Alyssa Herrera</li>
+              </ul>
+            </div>
+            <div class="names__item">
+              <h3>To Clothe Us as One</h3>
+              <ul>
+                <li>Gabriel Bautista & Camille Bautista</li>
+                <li>Ethan Valdez & Bianca Valdez</li>
+              </ul>
+            </div>
+            <div class="names__item">
+              <h3>To Bind Us Together</h3>
+              <ul>
+                <li>Christian Flores & Sophia Flores</li>
+                <li>Nathan Reyes & Olivia Reyes</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="names__group names__group--partnered">
+            <div class="names__item">
+              <h3>Maid of Honor</h3>
+
+              <p>Sofia Ramirez</p>
+            </div>
+            <div class="names__item">
+              <h3>Best Man</h3>
+
+              <p>Daniel Cruz</p>
+            </div>
+          </div>
+
+          <div class="names__group names__group--partnered">
+            <div class="names__item">
+              <h3>Bridesmaids</h3>
+
+              <ul>
+                <li>Alyssa Gomez</li>
+                <li>Camille Rivera</li>
+                <li>Nicole Bautista</li>
+                <li>Bianca Flores</li>
+              </ul>
+            </div>
+            <div class="names__item">
+              <h3>Groomsmen</h3>
+
+              <ul>
+                <li>Marcus Herrera</li>
+                <li>Ethan Valdez</li>
+                <li>Adrian Castillo</li>
+                <li>Gabriel Santos</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="names__group names__group--3up">
+            <div class="names__item">
+              <h3>Ring Bearer</h3>
+
+              <p>Lucas Fernandez</p>
+            </div>
+            <div class="names__item">
+              <h3>Bible Bearer</h3>
+
+              <p>Nathan Reyes</p>
+            </div>
+            <div class="names__item">
+              <h3>Coin Bearer</h3>
+
+              <p>Liam Navarro</p>
+            </div>
+            <div class="names__item">
+              <br />
+              <h3>Flower Girls</h3>
+
+              <ul>
+                <li>Chloe Martinez</li>
+                <li>Isabella Cruz</li>
+                <li>Mia Lopez</li>
+                <li>Sofia Anne Lim</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery">
+        <div class="section-heading reveal">
+          <span class="section__kicker">Gallery</span>
+          <h3>A few frames from the season before forever.</h3>
+        </div>
+        <div class="gallery__grid reveal">
+          <button class="gallery__item tall" data-gallery="0">
+            <img
+              src="src/img/1.jpg"
+              alt="A bride in her wedding dress photographed in soft, diffused light, her gaze gentle and contemplative, creating an intimate and romantic mood"
+            />
+          </button>
+          <button class="gallery__item" data-gallery="1">
+            <img
+              src="src/img/3.jpg"
+              alt="Two hands intertwined, the bride wearing her wedding ring, their fingers gently clasped together expressing commitment and affection"
+            />
+          </button>
+          <button class="gallery__item wide" data-gallery="2">
+            <img
+              src="src/img/7.jpg"
+              alt="A luxurious bridal bouquet featuring blush roses, white flowers, and greenery wrapped in ivory silk ribbon held in the bride hands against her white gown"
+            />
+          </button>
+          <button class="gallery__item" data-gallery="3">
+            <img
+              src="src/img/4.jpg"
+              alt="A couple standing together on a beach with calm blue water in the background, their poses relaxed and close, creating a peaceful and romantic seaside moment"
+            />
+          </button>
+          <button class="gallery__item" data-gallery="4">
+            <img
+              src="src/img/5.jpg"
+              alt="Silhouettes of a bride and groom standing close together against a golden sunset sky, their forms outlined in warm light conveying romance and celebration"
+            />
+          </button>
+          <button class="gallery__item" data-gallery="5">
+            <img
+              src="src/img/6.jpg"
+              alt="Silhouettes of a bride and groom standing close together against a golden sunset sky, their forms outlined in warm light conveying romance and celebration"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section class="rsvp section" id="rsvp">
+        <div class="rsvp__intro reveal">
+          <span class="section__kicker">RSVP</span>
+          <h3>Kindly respond by<br />May 18, 2027.</h3>
+          <p>
+            Seats have been lovingly reserved for invited guests. We cannot wait to celebrate with
+            you.
+          </p>
+        </div>
+        <form class="rsvp__form reveal" id="rsvpForm" novalidate>
+          <label>Full name<input name="name" autocomplete="name" required /></label>
+          <div class="group__row">
+            <label>
+              Email
+              <input id="guest-email" name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Contact Number
+              <input id="guest-contact" name="contact" type="tel" autocomplete="tel" required />
+            </label>
+          </div>
+          <div class="group__row">
+            <label
+              >Will you attend?
+              <select name="attendance" required>
+                <option value="">Select an answer</option>
+                <option>Joyfully attending</option>
+                <option>Regretfully unable to attend</option>
+              </select>
+            </label>
+            <label
+              >Number of guests
+              <select name="guests" required>
+                <option value="">Select</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </label>
+          </div>
+          <label class="full"
+            >Message for the couple<textarea name="message" rows="4"></textarea>
+          </label>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <button class="button" type="submit">Send RSVP</button>
+        </form>
+      </section>
+
+      <section class="faq section" id="faq">
+        <div class="section-heading reveal">
+          <span class="section__kicker">Gentle Reminders</span>
+          <h3>Everything to know before the day.</h3>
+        </div>
+        <div class="accordion reveal">
+          <button type="button">Can we bring additional guests?<span>+</span></button>
+          <div>
+            We have reserved seats for the names listed on your invitation. Thank you for
+            understanding.
+          </div>
+          <button type="button">Is parking available?<span>+</span></button>
+          <div>
+            Yes. Parking attendants will guide guests at both the church and reception venue.
+          </div>
+          <button type="button">What time should we arrive?<span>+</span></button>
+          <div>
+            Please arrive at the church by 2:00 PM so everyone may be seated before the procession.
+          </div>
+          <button type="button">Are children invited?<span>+</span></button>
+          <div>
+            Only children included in the entourage or named on the invitation are reserved seats.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__image"></div>
+      <div class="footer__content reveal">
+        <span class="monogram">J | A</span>
+        <h3>Thank you for being part of our beginning.</h3>
+        <p>June 18, 2027  |  Ipil, Zamboanga Sibugay</p>
+        <p>Made with ❤️ by BrixMikloi</p>
+      </div>
+    </footer>
+
+    <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery image viewer">
+      <button class="lightbox__close btn__ctrl" type="button" aria-label="Close gallery">
+        <img src="src/icons/close-btn.svg" alt="Close" />
+      </button>
+
+      <button class="lightbox__prev btn__ctrl" type="button" aria-label="Previous image">
+        <img src="src/icons/back-btn.svg" alt="Previous" />
+      </button>
+
+      <img class="lightbox__image" alt="" />
+
+      <button class="lightbox__next btn__ctrl" type="button" aria-label="Next image">
+        <img src="src/icons/next-btn.svg" alt="Next" />
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

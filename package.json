@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "format": "prettier --write index.html styles.css script.js googleScript.js .prettierrc package.json .vscode/settings.json",
+    "format:check": "prettier --check index.html styles.css script.js googleScript.js .prettierrc package.json .vscode/settings.json"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}

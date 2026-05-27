@@ -1,9 +1,9 @@
 const weddingDate = new Date("2027-06-18T14:30:00+08:00");
 const galleryImages = Array.from(document.querySelectorAll(".gallery__item img")).map((img) => ({
   src: img.src,
-  alt: img.alt
+  alt: img.alt,
 }));
-   
+
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
@@ -114,17 +114,24 @@ setInterval(updateCountdown, 1000);
 const music = $("#weddingMusic");
 const musicToggle = $(".music-toggle");
 
+const setMusicToggleState = (isPlaying) => {
+  musicToggle?.classList.toggle("is-playing", isPlaying);
+  musicToggle?.setAttribute("aria-pressed", String(isPlaying));
+  musicToggle?.setAttribute(
+    "aria-label",
+    isPlaying ? "Pause background music" : "Play background music"
+  );
+};
+
 const playMusic = async () => {
   if (!music) return;
 
   try {
     await music.play();
 
-    musicToggle.classList.add("is-playing");
-    musicToggle.setAttribute("aria-pressed", "true");
+    setMusicToggleState(true);
   } catch {
-    musicToggle.querySelector("span:last-child").textContent =
-      "Tap to Play";
+    setMusicToggleState(false);
   }
 };
 
@@ -134,21 +141,17 @@ const toggleMusic = async () => {
   if (music.paused) {
     await music.play();
 
-    musicToggle.classList.add("is-playing");
-    musicToggle.setAttribute("aria-pressed", "true");
+    setMusicToggleState(true);
   } else {
     music.pause();
 
-    musicToggle.classList.remove("is-playing");
-    musicToggle.setAttribute("aria-pressed", "false");
+    setMusicToggleState(false);
   }
 };
 
 musicToggle?.addEventListener("click", toggleMusic);
 
 window.addEventListener("load", playMusic);
-
-
 
 $$(".accordion button").forEach((button) => {
   button.addEventListener("click", () => {
@@ -178,17 +181,14 @@ const postJson = async (url, payload) => {
   }
 };
 
-  form?.addEventListener("submit", async (event) => {
+form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const invalid = $$("[required]", form).find(
-    (field) => !field.value.trim()
-  );
+  const invalid = $$("[required]", form).find((field) => !field.value.trim());
 
   if (invalid) {
     invalid.focus();
-    formStatus.textContent =
-      "Please complete the required fields before sending.";
+    formStatus.textContent = "Please complete the required fields before sending.";
     formStatus.style.color = "#9a5d4c";
     return;
   }
@@ -207,10 +207,8 @@ const postJson = async (url, payload) => {
   try {
     const result = await postJson(RSVP_ENDPOINT, payload);
 
-    // ✅ DUPLICATE CHECK
     if (result?.status === "duplicate") {
-      formStatus.textContent =
-        "This email has already submitted an RSVP.";
+      formStatus.textContent = "This email has already submitted an RSVP.";
       formStatus.style.color = "#9a5d4c";
       return;
     }
@@ -222,45 +220,13 @@ const postJson = async (url, payload) => {
 
     form.reset();
   } catch {
-    localStorage.setItem(
-      "wedding-rsvp-pending",
-      JSON.stringify(payload)
-    );
+    localStorage.setItem("wedding-rsvp-pending", JSON.stringify(payload));
 
-    formStatus.textContent =
-      "We saved your response on this device. Please try again later.";
+    formStatus.textContent = "We saved your response on this device. Please try again later.";
 
     formStatus.style.color = "#9a5d4c";
   }
 });
-
-// const defaultWishes = [
-//   { name: "Tita Elena", wish: "May your home always be filled with prayer, laughter, and good food." },
-//   { name: "Marco", wish: "So happy to witness this beautiful beginning. Cheers to forever." },
-//   { name: "Isabel", wish: "Your love has always felt calm, true, and generous. We love you both." }
-// ];
-
-// const wishWall = $("#wishWall");
-// const wishForm = $("#wishForm");
-
-// const renderWish = ({ name, wish }) => {
-//   const article = document.createElement("article");
-//   article.className = "wish";
-//   article.innerHTML = `<strong></strong><p></p>`;
-//   article.querySelector("strong").textContent = name;
-//   article.querySelector("p").textContent = wish;
-//   wishWall?.prepend(article);
-// };
-
-// defaultWishes.forEach(renderWish);
-
-// wishForm?.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   const data = Object.fromEntries(new FormData(wishForm).entries());
-//   if (!data.name.trim() || !data.wish.trim()) return;
-//   renderWish(data);
-//   wishForm.reset();
-// });
 
 let activeImage = 0;
 let touchStartX = 0;
