@@ -33,6 +33,15 @@ $$(".nav__links a").forEach((link) => {
   });
 });
 
+const memoryUploadLink = $("#memoryUploadLink");
+const memoryQr = $("#memoryQr");
+
+if (memoryUploadLink && memoryQr) {
+  const uploadUrl = new URL("upload.html", window.location.href).href;
+  memoryUploadLink.href = uploadUrl;
+  memoryQr.src = `https://quickchart.io/qr?size=320&margin=2&text=${encodeURIComponent(uploadUrl)}`;
+}
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {

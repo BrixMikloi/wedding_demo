@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "format": "prettier --write index.html styles.css script.js googleScript.js .prettierrc package.json .vscode/settings.json",
-    "format:check": "prettier --check index.html styles.css script.js googleScript.js .prettierrc package.json .vscode/settings.json"
+    "format": "prettier --write index.html upload.html styles.css script.js upload.js googleScript.js .prettierrc package.json",
+    "format:check": "prettier --check index.html upload.html styles.css script.js upload.js googleScript.js .prettierrc package.json"
   },
   "devDependencies": {
     "prettier": "^3.5.3"

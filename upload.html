@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Upload wedding photos and short videos for John and Arlyn." />
+    <title>Upload Your Memories | John & Arlyn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Old+Standard+TT:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="upload-page">
+    <main class="upload-shell">
+      <a class="upload-back" href="index.html#memories">Back to invitation</a>
+      <section class="upload-panel reveal is-visible" aria-labelledby="uploadTitle">
+        <span class="section__kicker">Upload Your Memories</span>
+        <h1 id="uploadTitle">John <span>&</span> Arlyn</h1>
+        <p class="upload-panel__lead">
+          Help us capture every beautiful moment - upload your photos here.
+        </p>
+
+        <form class="memory-form" id="memoryUploadForm" novalidate>
+          <label>
+            Your name
+            <input name="guestName" autocomplete="name" placeholder="So we know who sent them" />
+          </label>
+          <label>
+            Message for the couple
+            <textarea
+              name="message"
+              rows="4"
+              maxlength="500"
+              placeholder="A short note, prayer, or favorite moment"
+            ></textarea>
+          </label>
+          <label class="memory-drop">
+            <input
+              id="memoryFiles"
+              name="files"
+              type="file"
+              accept="image/jpeg,image/png,image/heic,image/heif,image/webp,video/mp4,video/quicktime,video/webm"
+              multiple
+              required
+            />
+            <span>Choose photos or short videos</span>
+            <small>JPG, PNG, HEIC, WEBP, MP4, MOV, WEBM. Up to 8 files, 20 MB each.</small>
+          </label>
+
+          <div class="file-list" id="memoryFileList" aria-live="polite"></div>
+          <div class="upload-progress" aria-hidden="true">
+            <span id="uploadProgressBar"></span>
+          </div>
+          <p class="form-status" id="memoryUploadStatus" role="status" aria-live="polite"></p>
+          <button class="button" type="submit">Upload Memories</button>
+        </form>
+
+        <div
+          class="upload-success"
+          id="uploadSuccess"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="uploadSuccessTitle"
+          aria-hidden="true"
+        >
+          <div class="upload-success__card">
+            <div class="upload-success__mark">&#10003;</div>
+            <h2 id="uploadSuccessTitle">Uploaded with love.</h2>
+            <p>Thank you for helping us keep this day close.</p>
+            <button class="button" type="button" id="uploadAgain">Upload More</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="upload.js"></script>
+  </body>
+</html>
